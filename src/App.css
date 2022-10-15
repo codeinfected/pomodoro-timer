@@ -1,38 +1,103 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&family=Inconsolata&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "DM Sans", sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app {
+  height: 100vh;
+  padding-left: 20px;
+  padding-right: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background: white;
+  color: #333;
+}
+
+h1 {
   color: white;
+  background-color: #554994;
+  margin-top: -100px;
+  margin-bottom: 100px;
+  width: fit-content;
+  padding: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+h2 {
+  max-width: 80vw;
+  color: #333;
+  /* font-size: 30px; */
+  text-align: center;
+  margin: 0;
+  font-weight: bold;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.timer {
+  font-family: "Inconsolata", monospace;
+  color: #333;
+  font-size: 200px;
+  margin-bottom: 20px;
+}
+
+.buttons button {
+  border: none;
+  font-size: 30px;
+  background: #f675a8;
+  color: white;
+  border-radius: 2px;
+  padding: 15px 30px;
+  cursor: pointer;
+  transition: 0.4s ease all;
+}
+
+.buttons button:hover {
+  outline: 1px solid #f675a8;
+  background-color: white;
+  color: #f675a8;
+}
+
+.buttons button:not(:last-child) {
+  margin-right: 20px;
+}
+
+@media (max-width: 688px) {
+  h2 {
+    font-size: 22px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .timer {
+    font-size: 100px;
+  }
+
+  .buttons button {
+    font-size: 18px;
+  }
+
+  .buttons button:not(:last-child) {
+    margin-right: 10px;
+  }
+}
+
+@media (min-width: 689px) and (max-width: 992px) {
+  h2 {
+    font-size: 28px;
+  }
+
+  .timer {
+    font-size: 150px;
+  }
+
+  .buttons button {
+    font-size: 22px;
   }
 }
